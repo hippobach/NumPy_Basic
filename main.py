@@ -40,3 +40,22 @@ flatArr = arr1.flatten()
 
 print("Original array:\n", arr1)
 print("Flattened array:\n", flatArr)
+
+# NumPy Array Indexing
+arr2 = np.array([[-1, 2, 0, 4],
+                 [4, -0.5, 6, 0],
+                 [2.6, 0, 7, 8],
+                 [3, -7, 4, 2.0]])
+# Slicing array
+temp = arr2[:2, ::2]
+"""
+[:2] chọn tất cả các hàng từ đầu đến hàng thứ hai (không bao gồm hàng thứ hai).
+[::2] chọn tất cả các cột từ đầu đến cuối với bước là 2, nghĩa là chọn các cột chẵn (cột 0 và cột 2).
+"""
+print("Array with first 2 rows and alternate"
+      "columns(0 and 2):\n", temp)
+
+# Boolean array indexing example
+cond = arr2 > 0
+temp = arr2[cond]
+print("\nElements greater than 0:\n", temp)
